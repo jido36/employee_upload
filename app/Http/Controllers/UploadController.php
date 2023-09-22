@@ -12,7 +12,7 @@ use Illuminate\Database\QueryException;
 class UploadController extends Controller
 {
 
-    /**NOTE -
+    /**
      * Receive and upload employee data from api call
      *
      * pass the the data to uploadService to store in the database
@@ -37,7 +37,7 @@ class UploadController extends Controller
         return response()->json(['message' => $upload['message']], $upload['status']);
     }
 
-    /**NOTE -
+    /**-
      * Lists paginates the employee record in the DB
      *
      * @return JsonResponse
@@ -54,7 +54,7 @@ class UploadController extends Controller
         }
     }
 
-    /**NOTE -
+    /**
      * Fetch the employee data by employee id
      *
      * @param $id
@@ -76,7 +76,7 @@ class UploadController extends Controller
         }
     }
 
-    /**NOTE -
+    /**
      * Delete Employee record by the emplyee id
      *
      * @param $id
