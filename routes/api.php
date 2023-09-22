@@ -15,8 +15,7 @@ use App\Http\Controllers\UploadController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::post('/employee', [UploadController::class, 'uploadEmployeeData']);
+Route::get('/employee', [UploadController::class, 'index']);
+Route::get('/employee/{id}', [UploadController::class, 'show']);
+Route::delete('/employee/{id}', [UploadController::class, 'delete']);
